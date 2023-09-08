@@ -14,11 +14,8 @@
 
 class Solution:
 	def generate(numRows: int):
-		if numRows == 1:
-			return [[1]]
-
-		triangle = [[1],[1,1]]
-		for i in range(2,numRows):
+		triangle = [[1]]
+		for i in range(1,numRows):
 			newRow = [1]
 			for j in range(0,len(triangle[i-1]) - 1):
 				newRow.append(triangle[i-1][j] + triangle[i-1][j+1])
@@ -30,9 +27,9 @@ class Solution:
 print(Solution.generate(numRows=1))
 print(Solution.generate(numRows=2))		
 print(Solution.generate(numRows=3))
+print(Solution.generate(numRows=4))
 
 # This is not particularly elegant.
-# Still, it works fine and is competative.
-# With truncating the triangle for numRows = 1 memory is long but speed is a but of an issue.
-# With the exception for numRows = 1 the speed is good, but the memory is a bit of an issue.
-# My guess though, is that there's not too much to be done here and the results may depend in significant part on other factors.
+# Still, it works fine.
+
+# Wrt previous commit, this runs with most memory and slowest time, so the comparisons should be ignored.
