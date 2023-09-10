@@ -33,7 +33,9 @@ class Solution:
 	def countOrders(n: int):
 		history = [0,1]
 		for i in range(2,n+1):
-			history.append(sum((2 * (i - 1)) + 1) * history[i-1])
+			# history.append(sum((2 * (i - 1)) + 1) * history[i-1])
+			x = (2 * (i - 1)) + 1
+			history.append((x * (x + 1) // 2) * history[i-1])
 		return history[n] % ((10 ** 9) + 7)
 
 print(sum(2))
@@ -44,3 +46,8 @@ print(Solution.countOrders(n=2))
 # For, given the solution to n-1 there are (solution(n-1) + 1) different pickup/delivery points.
 # So, then, there are this many options if pickup happens first.
 # One fewer if pickup happens second, and so on.
+
+# Though, apparently this is very slow.
+
+Okay, Euler for sum helps.
+
