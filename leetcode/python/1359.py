@@ -4,8 +4,6 @@
 
 # Since the answer may be too large, return it modulo 10^9 + 7.
 
- 
-
 # Example 1:
 
 # Input: n = 1
