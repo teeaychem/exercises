@@ -18,6 +18,9 @@
 # So, a binary search.
 # There's not much too this, other than a check on which value to return if the value is not found.
 # As // gets floor, m will always be lower.
+# halfway between u and l is distance between offset by l.
+# i.e. m = (l + (u - l)//2)
+# and m = (l + (u - l)//2) = (l + u//2 - l//2) = (l//2 + u//2) = ((u + l)//2)
 
 def searchInsert(nums: [int], target: int) -> int:
 	l = 0
