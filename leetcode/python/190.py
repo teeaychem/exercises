@@ -35,6 +35,8 @@ def reverseBitsB(self, n: int) -> int:
 		p += 1
 	return result
 
+# Second option get's python to do the reverse and reconstruction.
+
 def reverseBitsC(n: int) -> int:
 	return int(format(n, '032b')[::-1], 2)
 
